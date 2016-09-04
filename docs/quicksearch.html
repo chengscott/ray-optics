@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body style="background: transparent;">
+    <script src="scripts/docstrap.lib.js"></script>
+    <script src="scripts/lunr.min.js"></script>
+    <script src="scripts/fulltext-search.js"></script>
+
+    <script type="text/x-docstrap-searchdb">
+    {"global.html":{"id":"global.html","title":"Global","body":" Documentation Global crossdotintersectionintersection_2linelengthlength_segmentlength_segment_squaredlength_squaredmidpointparallelperpendicular_bisector Global Methods cross(l1, l2) outer product Parameters: Name Type Description l1 graph.line l2 graph.line Returns: Type Number dot(p1, p2) inner product Parameters: Name Type Description p1 graph.point p2 graph.point Returns: Type Number intersection(obj1, obj2) 求交點 Parameters: Name Type Description obj1 graph obj2 graph Returns: Type graph.point intersection_2line(l1, l2) 兩直線交點 Parameters: Name Type Description l1 graph.line l2 graph.line Returns: Type graph.point intersection_2line(l1, c2) 直線與圓的交點 Parameters: Name Type Description l1 graph.line c2 graph.circle Returns: Type graph.point length(p1, p2) 兩點距離 Parameters: Name Type Description p1 graph.point p2 graph.point Returns: Type Number length_segment(seg) 線段長度 Parameters: Name Type Description seg graph.segment Returns: Type Number length_segment_squared(seg) 線段長度平方 Parameters: Name Type Description seg graph.segment Returns: Type Number length_squared(p1, p2) 兩點距離平方 Parameters: Name Type Description p1 graph.point p2 graph.point Returns: Type Number midpoint(l1) 線段中點 Parameters: Name Type Description l1 graph.line Returns: Type graph.point parallel(l1, p1) 畫通過一點且與一直線平行的線 Parameters: Name Type Description l1 graph.line p1 graph.point Returns: Type graph.line perpendicular_bisector(l1) 線段中垂線 Parameters: Name Type Description l1 graph.line Returns: Type graph.line × Search results Close "},"index.html":{"id":"index.html","title":"Index","body":" Documentation Global crossdotintersectionintersection_2linelengthlength_segmentlength_segment_squaredlength_squaredmidpointparallelperpendicular_bisector Ray Optics SimulationSimulate reflection and refraction of light. Features Simulate various light sources: ray, beam, and point source Simulate reflection in plane or arc mirror Simulate refraction in plane or arc interfaces, including both refracted and reflected rays Simulate ideal lens/mirror, which obeys lens/mirror equation View extensions of rays to see if they converge to a virtual image View real images, virtual images and virtual objects directly View images that can be observed from some given position Distance and angular measurement Links Project Page Chrome App Documentation Quick Start Clone the repo: git clone https://github.com/ricktu288/ray-optics.git Prerequisites node npm Environment Setupnpm install # installs dependenciesDocumentationThe documentation of Ray Optics Simulation is built with JSDoc and DocStrap. All configs can be found in jsdoc-config.json. Compile with JSDocnpm run jsdocLicenseCopyright 2016 Rick Tu Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. Third-Party SoftwareRay Optics Simulation includes or depends upon the following third-party software, either in whole or in part. Each third-party software package is provided under its own license. FileSaver.jsFileSaver.js is distributed under the MIT license. The source code is available at: https://github.com/eligrey/FileSaver.js BootstrapBootstrap is distributed under the MIT license. The source code is available at: https://github.com/twbs/bootstrap × Search results Close "}}
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            Searcher.init();
+        });
+
+        $(window).on("message", function(msg) {
+            var msgData = msg.originalEvent.data;
+
+            if (msgData.msgid != "docstrap.quicksearch.start") {
+                return;
+            }
+
+            var results = Searcher.search(msgData.searchTerms);
+
+            window.parent.postMessage({"results": results, "msgid": "docstrap.quicksearch.done"}, "*");
+        });
+    </script>
+</body>
+</html>
