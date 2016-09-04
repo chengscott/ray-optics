@@ -1,0 +1,31 @@
+{
+  "name": "ray-optics",
+  "version": "2.0.0",
+  "description": "Simulate reflection and refraction of light.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "jsdoc": "jsdoc -c jsdoc-config.json",
+    "lint": "eslint simulator/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricktu288/ray-optics.git"
+  },
+  "keywords": [
+    "ray-optics"
+  ],
+  "author": "ricktu288",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ricktu288/ray-optics/issues"
+  },
+  "homepage": "https://ricktu288.github.io/ray-optics/",
+  "devDependencies": {
+    "jsdoc": "^3.4.0",
+    "ink-docstrap": "^1.3.0"
+  }
+}

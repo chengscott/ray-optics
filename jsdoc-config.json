@@ -1,0 +1,23 @@
+{
+  "source": {
+    "include": ["simulator/index.js", "README.md"]
+  },
+  "opts": {
+    "default": {
+        "outputSourceFiles" : true
+    },
+    "destination": "./docs/",
+    "encoding": "utf8",
+    "template": "node_modules/ink-docstrap/template"
+  },
+  "templates": {
+    "footer": "",
+    "copyright":  "Developed by Rick Tu",
+    "includeDate": "true",
+    "theme": "cosmo",
+    "linenums": "true",
+    "collapseSymbols": "true",
+    "inverseNav": "false",
+    "dateFormat": "Y-MM-DD"
+  }
+}
