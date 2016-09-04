@@ -11,8 +11,33 @@ Simulate reflection and refraction of light.
 - Distance and angular measurement
 
 ## Links
-- [Project Page](https://chengscott.github.io/ray-optics/)
+- [Project Page](https://ricktu288.github.io/ray-optics/)
 - [Chrome App](https://chrome.google.com/webstore/detail/ray-optics-simulation/egamlemiidmmmcccadndbjjihkcfiobh)
+- [Documentation](https://chengscott.github.io/ray-optics/)
+
+# Quick Start
+
+Clone the repo: `git clone https://github.com/ricktu288/ray-optics.git`
+
+## Prerequisites
+
+- node
+- npm
+
+
+## Environment Setup
+
+```
+npm install # installs dependencies
+```
+
+## Documentation
+The documentation of Ray Optics Simulation is built with [JSDoc](http://usejsdoc.org/) and [DocStrap](https://github.com/docstrap/docstrap). All configs can be found in `jsdoc-config.json`.
+
+### Compile with JSDoc
+```
+npm run jsdoc
+```
 
 # Quick Start
 
